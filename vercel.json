@@ -1,0 +1,16 @@
+{
+  "framework": "vite",
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "rewrites": [
+    {"source": "/lab", "destination": "/lab.html"}
+  ],
+  "headers": [
+    {
+      "source": "/audio-processor.js",
+      "headers": [
+        {"key": "Content-Type", "value": "application/javascript"}
+      ]
+    }
+  ]
+}

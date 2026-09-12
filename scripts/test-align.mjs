@@ -1,0 +1,2 @@
+const sim=(a,b)=>a===b?1:0;function align(h){const e=['a','b','c'];let out=[],i=0;for(const x of h){if(x===e[i])out.push('matched'),i++;else if(x===e[i+1])out.push('skipped','matched'),i+=2}while(out.length<3)out.push('pending');return out.slice(0,3)}
+for(const [name,h] of [['exact',['a','b','c']],['recovery',['a','c']],['repeat',['a','a','b','c']],['insert',['a','x','b','c']]]) console.log(`${name}: ${align(h).join(',')}`);
